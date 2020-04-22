@@ -18,7 +18,7 @@
         vpc_id: "{{VPC1.vpcs[0].vpc_id}}"
         region: "{{region}}"
         tags:
-          Name: private
+          Name: Private
         subnets:
           - "{{Priv_Subnet1.subnet.id}}"
           - "{{Priv_Subnet2.subnet.id}}"

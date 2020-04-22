@@ -1,17 +1,16 @@
 ---
-- name: Playbook for Route table for  Private
+- name: Playbook for Private Route Table
   hosts: localhost
-  gather_facts: no
+  gather_facts: yes
   vars_files:
     - region.yaml
   tasks:
     - name: Collect VPC info
-      ec2_vpc_net_facts:
+      ec2_vpc_net_info:
         region: "{{region}}"
         filters:
           "tag:Task": VPC
       register: VPC1
-
 
     - name: Set up private subnet route table
       ec2_vpc_route_table:

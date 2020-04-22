@@ -4,16 +4,16 @@
   gather_facts: no
   vars_files:
     - region.yaml
-  ignore_errors: yes
+  ignore_errors: no
 
   tasks:
     - name: Collect VPC info
-      ec2_vpc_net_facts:
+      ec2_vpc_net_info:
         region: "{{region}}"
         filters:
           "tag:Task": VPC
       register: VPC1
-    - name: create IGW 
+    - name: Create IGW 
       ec2_vpc_igw:
         region: "{{region}}"
         vpc_id: "{{VPC1.vpcs[0].id}}"

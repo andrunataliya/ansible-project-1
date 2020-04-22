@@ -1,26 +1,26 @@
 ---
-- name: all vpc playbooks
+- name: All VPC Playbooks
   hosts: localhost
   tasks: 
 
 
-- name: Create Vpc
+- name: Create VPC
   include: vpc.yaml
 
-- name: Create Pub Subnets
+- name: Create Public Subnets
   include: public-sub.yaml
 
 - name: Create IGW
   include: internet-gateway.yaml
 
-- name: Create Priv Subnets
+- name: Create Private Subnets
   include: private-sub.yaml
 
-- name: Create  Nat Gateway
+- name: Create Nat Gateway
   include: nat-gateway.yaml
 
-- name: Create RT
+- name: Create Private RT
   include: route-table-priv.yaml
 
-- name: Create RT
+- name: Create Public RT
   include: route-table-pub.yaml

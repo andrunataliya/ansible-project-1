@@ -5,7 +5,7 @@
   
   vars_files:
     - region.yaml
-  ignore_errors: yes
+  ignore_errors: no
 
   tasks:
     - name: Create NAT Gateway
@@ -13,4 +13,3 @@
         region: "{{region}}"
         subnet_id: "{{Pub_Subnet1.subnet.id}}"
         state: present
-      register: nat

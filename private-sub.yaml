@@ -21,6 +21,7 @@
         vpc_id: "{{VPC1.vpcs[0].id}}"
         region: "{{region}}"
         cidr: "{{Private_cidr1}}"
+        az: "{{region}}a"
         resource_tags:
           Name: Priv Subnet1
       register: Priv_Subnet1
@@ -31,6 +32,7 @@
         vpc_id: "{{VPC1.vpcs[0].id}}"
         region: "{{region}}"
         cidr: "{{Private_cidr2}}"
+        az: "{{region}}b"
         resource_tags:
           Name: Priv Subnet2
       register: Priv_Subnet2
@@ -42,6 +44,7 @@
         vpc_id: "{{VPC1.vpcs[0].id}}"
         region: "{{region}}"
         cidr: "{{Private_cidr3}}"
+        az: "{{region}}c"
         resource_tags:
           Name: Priv Subnet3
       register: Priv_Subnet3

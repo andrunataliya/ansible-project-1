@@ -31,5 +31,5 @@
           - "{{Priv_Subnet3.subnet.id}}"
         routes:
           - dest: 0.0.0.0/0
-            gateway_id: "{{ nat_gateway.nat_gateway_id}}"
+            nat_gateway_id: "{{ nat_gateway.nat_gateway_id}}"
       register: nat_route_table

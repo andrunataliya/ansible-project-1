@@ -13,3 +13,4 @@
         region: "{{region}}"
         subnet_id: "{{Pub_Subnet1.subnet.id}}"
         state: present
+      register: nat_gateway
